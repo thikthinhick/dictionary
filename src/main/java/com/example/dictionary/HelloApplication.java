@@ -15,6 +15,6 @@ public class HelloApplication {
 
     public static void main(String[] args) throws URISyntaxException {
         DictionaryCommandline dictionaryCommandline = new DictionaryCommandline();
-        dictionaryCommandline.dictionryAdvanced();
+        dictionaryCommandline.test();
     }
 }

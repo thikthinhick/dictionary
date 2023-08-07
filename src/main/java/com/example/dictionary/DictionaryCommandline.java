@@ -2,7 +2,9 @@ package com.example.dictionary;
 
 import com.example.dictionary.model.Word;
 
+import java.util.ArrayList;
 import java.util.List;
+import java.util.Scanner;
 
 public class DictionaryCommandline {
     private final DictionaryManagement dictionaryManagement = new DictionaryManagement();
@@ -20,5 +22,20 @@ public class DictionaryCommandline {
     public void dictionryAdvanced() {
         dictionaryManagement.insertFromFile();
         dictionaryManagement.dictionaryLookup();
+    }
+    public void test() {
+        dictionaryManagement.dictionaryExportToFile();
+    }
+    public void dictionarySearcher() {
+        System.out.print("Nhập từ cần tìm kiếm: ");
+        Scanner scanner = new Scanner(System.in);
+        String word = scanner.next();
+        List<String> lists = new ArrayList<>();
+        dictionaryManagement.getDictionary().getWords().forEach(e -> {
+            if(e.getWordTarget().startsWith(word)) {
+                lists.add(e.getWordTarget());
+            }
+        });
+        System.out.println(lists);
     }
 }
