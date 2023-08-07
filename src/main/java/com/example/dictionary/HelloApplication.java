@@ -1,5 +1,8 @@
 package com.example.dictionary;
 
+import java.net.URISyntaxException;
+import java.net.URL;
+
 public class HelloApplication {
 //    @Override
 //    public void start(Stage stage) throws IOException {
@@ -10,8 +13,8 @@ public class HelloApplication {
 //        stage.show();
 //    }
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws URISyntaxException {
         DictionaryCommandline dictionaryCommandline = new DictionaryCommandline();
-        dictionaryCommandline.dictionaryBasic();
+        dictionaryCommandline.dictionryAdvanced();
     }
 }

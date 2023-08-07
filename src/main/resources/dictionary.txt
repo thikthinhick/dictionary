@@ -1,0 +1,3 @@
+school	trường học
+class	lớp học
+computer	máy tính
